@@ -41,7 +41,7 @@ RUN GOARCH="$(xcputranslate translate -targetplatform ${TARGETPLATFORM} -field a
   -X 'main.version=$VERSION' \
   -X 'main.buildDate=$CREATED' \
   -X 'main.commit=$COMMIT' \
-  " -o entrypoint cmd/cli-template/main.go
+  " -o entrypoint cmd/vintedrop/main.go
 
 FROM --platform=${BUILDPLATFORM} base AS mocks
 RUN git init && \
@@ -64,11 +64,11 @@ LABEL \
   org.opencontainers.image.created=$CREATED \
   org.opencontainers.image.version=$VERSION \
   org.opencontainers.image.revision=$COMMIT \
-  org.opencontainers.image.url="https://github.com/qdm12/cli-template" \
-  org.opencontainers.image.documentation="https://github.com/qdm12/cli-template" \
-  org.opencontainers.image.source="https://github.com/qdm12/cli-template" \
-  org.opencontainers.image.title="cli-template" \
+  org.opencontainers.image.url="https://github.com/qdm12/vintedrop" \
+  org.opencontainers.image.documentation="https://github.com/qdm12/vintedrop" \
+  org.opencontainers.image.source="https://github.com/qdm12/vintedrop" \
+  org.opencontainers.image.title="vintedrop" \
   org.opencontainers.image.description=""
-ENTRYPOINT ["/cli-template"]
+ENTRYPOINT ["/vintedrop"]
 USER 1000
-COPY --from=build --chown=1000 /tmp/gobuild/entrypoint /cli-template
+COPY --from=build --chown=1000 /tmp/gobuild/entrypoint /vintedrop

@@ -36,10 +36,10 @@ jobs:
           use-quiet-mode: yes
 
       - uses: peter-evans/dockerhub-description@v4
-        if: github.repository == 'qdm12/cli-template' && github.event_name == 'push'
+        if: github.repository == 'qdm12/vintedrop' && github.event_name == 'push'
         with:
           username: qmcgaw
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          repository: qmcgaw/cli-template
-          short-description: SHORT_DESCRIPTION
+          repository: qmcgaw/vintedrop
+          short-description: Drop periodically the price of all your items listed on your Vinted account
           readme-filepath: README.md

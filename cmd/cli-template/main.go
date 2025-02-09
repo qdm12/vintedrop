@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/qdm12/cli-template/internal/config"
-	"github.com/qdm12/cli-template/internal/models"
+	"github.com/qdm12/vintedrop/internal/config"
+	"github.com/qdm12/vintedrop/internal/models"
 	"github.com/qdm12/gosettings/reader"
 )
 

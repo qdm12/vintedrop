@@ -5,7 +5,7 @@
         "TZ": ""
     },
     // Fixed settings
-    "name": "cli-template-dev",
+    "name": "vintedrop-dev",
     "postCreateCommand": "~/.windows.sh && go mod download && go mod tidy",
     "dockerComposeFile": "docker-compose.yml",
     "overrideCommand": true,

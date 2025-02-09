@@ -1,4 +1,4 @@
-module github.com/qdm12/cli-template
+module github.com/qdm12/vintedrop
 
 go 1.23
 
